@@ -5,10 +5,10 @@ const development = {
 };
 
 const production = {
-  url: "https://bolsonvegetal.onrender.com/items",
-  authUrl: "https://bolsonvegetal.onrender.com/auth",
-  imgUrl: "https://bolsonvegetal.onrender.com/img",
+  url: "https://bolsonvegetal-iqs3.onrender.com/items",
+  authUrl: "https://bolsonvegetal-iqs3.onrender.com/auth",
 };
 
 // eslint-disable-next-line no-undef
-export const config = process.env.NODE_ENV === "development" ? development : production;
+export const config =
+  process.env.NODE_ENV === "development" ? development : production;
