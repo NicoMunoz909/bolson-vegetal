@@ -1,0 +1,57 @@
+.login {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.login img {
+  display: block;
+  width: 80px;
+  margin: auto;
+}
+
+.login-form {
+  width: fit-content;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 1px rgb(110, 109, 109), -1px -1px 4px 1px rgb(110, 109, 109);
+  margin: auto;
+}
+
+.login-form input {
+  display: block;
+  margin: 10px;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px;
+}
+
+.login button {
+  display: block;
+  margin-top: 20px;
+  margin: auto;
+  background-color: #009550;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-family: "Paper Flower";
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.login button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.login svg {
+  display: block;
+  margin: auto;
+  color: #009550;
+  font-size: 30px;
+  margin-top: 20px;
+}

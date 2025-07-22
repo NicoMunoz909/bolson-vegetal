@@ -1,0 +1,30 @@
+# Node.js / Backend
+node_modules/
+server/node_modules/
+server/.env
+server/logs
+server/*.log
+server/crearAdmin.js
+
+# React / Frontend
+client/node_modules/
+client/dist/
+client/.env
+
+# Admin Panel / Backoffice
+admin-panel/node_modules/
+admin-panel/dist/
+admin-panel/.env
+
+# General
+.env
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+
+# Sistema
+logs
+*.log

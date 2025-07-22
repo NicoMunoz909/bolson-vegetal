@@ -1,0 +1,79 @@
+.envios-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.envios-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.envios-subtitle {
+  color: #4b5563;
+  font-size: 1.1rem;
+}
+
+.zonas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.zona-card {
+  background: white;
+  width: fit-content;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 250px;
+  transition: box-shadow 0.3s ease;
+}
+
+.zona-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.zona-card .icon {
+  font-size: 30px;
+  color: #22c55e;
+}
+
+.zona-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1f2937;
+}
+
+.zona-info p {
+  margin: 3px 0 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.horario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.horario .icon {
+  font-size: 24px;
+  color: #22c55e;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .zona-card {
+    width: 100%;
+  }
+}
