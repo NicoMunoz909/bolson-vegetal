@@ -106,12 +106,19 @@ npm install
 Crear un archivo .env en la carpeta /server con el siguiente contenido:
 
 DB_NAME=nombre_de_tu_db
+
 DB_USER=usuario
+
 DB_PASSWORD=contraseña
+
 DB_HOST=localhost
+
 JWT_SECRET=tu_clave_secreta
+
 CLOUDINARY_CLOUD_NAME=xxx
+
 CLOUDINARY_API_KEY=xxx
+
 CLOUDINARY_API_SECRET=xxx
 
 ### 4️⃣ Crear la base de datos y poblarla:
@@ -138,7 +145,9 @@ npm run dev
 ## 👨‍💻 **Autor**
 
 Nicolás Muñoz
+
 Desarrollador Fullstack
+
 [LinkedIn](https://www.linkedin.com/in/nicolas-munoz-nmz/)
 
 ---
