@@ -55,8 +55,10 @@ const updateItem = async (req, res) => {
 
 const changeItemStock = async (req, res) => {
   try {
-    const { stock } = req.body;
-    const item = await Item.update({ stock }, { where: { id: req.params.id } });
+    const item = await Item.update(
+      { inStock: req.body.inStock },
+      { where: { id: req.params.id } }
+    );
     res.send(item);
   } catch (error) {
     res.send(error);
