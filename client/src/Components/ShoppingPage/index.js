@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./shoppingPage.css";
 import { CartDispacthContext } from "../../Contexts/CartContext";
+import { ItemsContext } from "../../Contexts/ItemsContext";
 import bolsones from "../../Assets/Categorias/Banners/bolsones.webp";
 import frutas from "../../Assets/Categorias/Banners/frutas.webp";
 import verduras from "../../Assets/Categorias/Banners/verduras.webp";
@@ -11,7 +12,7 @@ import congelados from "../../Assets/Categorias/Banners/congelados.webp";
 import bebidas from "../../Assets/Categorias/Banners/bebidas.webp";
 import ofertas from "../../Assets/Categorias/Banners/ofertas.webp";
 
-const ShoppingPage = ({ titulo, products }) => {
+const ShoppingPage = ({ titulo }) => {
   const dispatch = useContext(CartDispacthContext);
   const fotos = {
     bolsones,
@@ -23,6 +24,8 @@ const ShoppingPage = ({ titulo, products }) => {
     bebidas,
     ofertas,
   };
+  const items = useContext(ItemsContext);
+  const products = items.items.filter((i) => i.category === titulo);
 
   // const filterOptions = filtros
   // function toggleFilters() {

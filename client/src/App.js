@@ -3,18 +3,21 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { CartProvider } from "./Contexts/CartContext";
+import { ItemsProvider } from "./Contexts/ItemsContext";
 
-function App({ isLoading }) {
+function App() {
   return (
-    <CartProvider>
-      <div className="App">
-        <Navbar />
-        <div style={{ marginTop: "75px" }}>
-          <Outlet />
+    <ItemsProvider>
+      <CartProvider>
+        <div className="App">
+          <Navbar />
+          <div style={{ marginTop: "75px" }}>
+            <Outlet />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </CartProvider>
+      </CartProvider>
+    </ItemsProvider>
   );
 }
 

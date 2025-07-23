@@ -9,6 +9,6 @@ const production = {
   authUrl: "https://bolsonvegetal-iqs3.onrender.com/auth",
 };
 
-// eslint-disable-next-line no-undef
 export const config =
+  // eslint-disable-next-line no-undef
   process.env.NODE_ENV === "development" ? development : production;
