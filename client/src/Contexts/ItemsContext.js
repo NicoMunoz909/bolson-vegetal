@@ -17,7 +17,7 @@ export const ItemsProvider = ({ children }) => {
       })
       .catch((err) => alert(err))
       .finally(() => setIsLoading(false));
-  }, []);
+  }, [URL]);
 
   return (
     <ItemsContext.Provider value={{ items, isLoading }}>
