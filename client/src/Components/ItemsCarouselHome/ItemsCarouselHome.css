@@ -11,6 +11,11 @@
   z-index: 1;
 }
 
+.carouselHandler:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .left {
   left: 20px;
 }
@@ -44,6 +49,10 @@
   font-family: 'Paper Flower';
   font-size: 20px;
   border-radius: 10px;
+}
+
+.loader {
+  height: 250px;
 }
 
 .item img {

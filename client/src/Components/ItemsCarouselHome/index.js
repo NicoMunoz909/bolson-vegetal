@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import "./ItemsCarouselHome.css";
 import { CartDispacthContext } from "../../Contexts/CartContext";
+import Loader from "../Loader";
+import { ItemsContext } from "../../Contexts/ItemsContext";
 
 const ItemsCarouselHome = ({ id, items }) => {
+  const isLoading = useContext(ItemsContext).isLoading;
   const dispatch = useContext(CartDispacthContext);
 
   let translatePercentage = 0;
@@ -50,22 +53,31 @@ const ItemsCarouselHome = ({ id, items }) => {
         <FaChevronCircleLeft onClick={translateLeft} />
       </div>
       <div className="itemsContainer" id={id}>
-        {items.map((i) => {
-          return (
-            <div className="itemContainer" key={i.id}>
-              <div className="item">
-                <img src={i.imageUrl} alt={i.name} />
-                <h3>{i.name}</h3>
-                <p>
-                  ${i.price} x {i.priceType}
-                </p>
-                <button onClick={() => dispatch({ type: "ADD", item: i })}>
-                  Añadir al carrito
-                </button>
-              </div>
+        {isLoading ? (
+          <div className="itemContainer">
+            <div className="item loader">
+              <Loader />
+              <p>Cargando...</p>
             </div>
-          );
-        })}
+          </div>
+        ) : (
+          items.map((i) => {
+            return (
+              <div className="itemContainer" key={i.id}>
+                <div className="item">
+                  <img src={i.imageUrl} alt={i.name} />
+                  <h3>{i.name}</h3>
+                  <p>
+                    ${i.price} x {i.priceType}
+                  </p>
+                  <button onClick={() => dispatch({ type: "ADD", item: i })}>
+                    Añadir al carrito
+                  </button>
+                </div>
+              </div>
+            );
+          })
+        )}
       </div>
       <div className="carouselHandler right">
         <FaChevronCircleRight onClick={translateRight} />

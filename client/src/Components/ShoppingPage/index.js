@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import "./shoppingPage.css";
 import { CartDispacthContext } from "../../Contexts/CartContext";
 import { ItemsContext } from "../../Contexts/ItemsContext";
+import Loader from "../Loader";
 import bolsones from "../../Assets/Categorias/Banners/bolsones.webp";
 import frutas from "../../Assets/Categorias/Banners/frutas.webp";
 import verduras from "../../Assets/Categorias/Banners/verduras.webp";
@@ -25,6 +26,7 @@ const ShoppingPage = ({ titulo }) => {
     ofertas,
   };
   const items = useContext(ItemsContext);
+  const isLoading = items.isLoading;
   const products = items.items.filter((i) => i.category === titulo);
 
   // const filterOptions = filtros
@@ -73,30 +75,41 @@ const ShoppingPage = ({ titulo }) => {
           {products.length === 0 && (
             <h2 style={{ margin: "auto" }}>No hay productos para mostrar</h2>
           )}
-          {products
-            .filter((item) =>
-              item.name.toLowerCase().includes(search.toLowerCase())
-            )
-            .map((i) => {
-              return (
-                <div
-                  className="itemContainer"
-                  id="items-container"
-                  style={{ width: "40%" }}
-                >
-                  <div className="item">
-                    <img src={i.imageUrl} alt={i.name} />
-                    <h3>{i.name}</h3>
-                    <p>
-                      ${i.price} x {i.priceType}
-                    </p>
-                    <button onClick={() => dispatch({ type: "ADD", item: i })}>
-                      Añadir al carrito
-                    </button>
+          {isLoading ? (
+            <div className="itemContainer">
+              <div className="item loader">
+                <Loader />
+                <p>Cargando...</p>
+              </div>
+            </div>
+          ) : (
+            products
+              .filter((item) =>
+                item.name.toLowerCase().includes(search.toLowerCase())
+              )
+              .map((i) => {
+                return (
+                  <div
+                    className="itemContainer"
+                    id="items-container"
+                    style={{ width: "40%" }}
+                  >
+                    <div className="item">
+                      <img src={i.imageUrl} alt={i.name} />
+                      <h3>{i.name}</h3>
+                      <p>
+                        ${i.price} x {i.priceType}
+                      </p>
+                      <button
+                        onClick={() => dispatch({ type: "ADD", item: i })}
+                      >
+                        Añadir al carrito
+                      </button>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+          )}
         </div>
       </div>
     </div>
