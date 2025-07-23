@@ -118,7 +118,7 @@ const Products = ({ token }) => {
 
   const handleStockSwitch = (e, item) => {
     fetch(URL + `/${item.id}`, {
-      method: "PATCH",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
