@@ -53,6 +53,16 @@ const updateItem = async (req, res) => {
   }
 };
 
+const changeItemStock = async (req, res) => {
+  try {
+    const { stock } = req.body;
+    const item = await Item.update({ stock }, { where: { id: req.params.id } });
+    res.send(item);
+  } catch (error) {
+    res.send(error);
+  }
+};
+
 const deleteItem = async (req, res) => {
   try {
     const item = await Item.destroy({ where: { id: req.params.id } });
@@ -62,4 +72,11 @@ const deleteItem = async (req, res) => {
   }
 };
 
-module.exports = { getAll, getById, createItem, updateItem, deleteItem };
+module.exports = {
+  getAll,
+  getById,
+  createItem,
+  updateItem,
+  changeItemStock,
+  deleteItem,
+};
