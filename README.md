@@ -73,9 +73,9 @@ Incluye:
 
 | Parte          | Link                                                               |
 | -------------- | ------------------------------------------------------------------ |
-| **Frontend**   | [VERCEL LINK AQUI](https://bolson-vegetal-front.vercel.app/)       |
-| **Backoffice** | [VERCEL LINK AQUI](https://bolson-vegetal-admin-panel.vercel.app/) |
-| **Backend**    | [RENDER LINK AQUI](https://bolsonvegetal-iqs3.onrender.com)        |
+| **Frontend**   | [VERCEL](https://bolson-vegetal-front.vercel.app/)       |
+| **Backoffice** | [VERCEL](https://bolson-vegetal-admin-panel.vercel.app/) |
+| **Backend**    | [RENDER](https://bolsonvegetal-iqs3.onrender.com)        |
 
 ---
 
@@ -104,23 +104,16 @@ npm install
 ### 3️⃣ Configurar variables de entorno:
 
 Crear un archivo .env en la carpeta /server con el siguiente contenido:
-
+```
 DB_NAME=nombre_de_tu_db
-
 DB_USER=usuario
-
 DB_PASSWORD=contraseña
-
 DB_HOST=localhost
-
 JWT_SECRET=tu_clave_secreta
-
 CLOUDINARY_CLOUD_NAME=xxx
-
 CLOUDINARY_API_KEY=xxx
-
 CLOUDINARY_API_SECRET=xxx
-
+```
 ### 4️⃣ Crear la base de datos y poblarla:
 
 Ejecutá el siguiente comando para crear la base de datos automáticamente:
