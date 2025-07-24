@@ -1,6 +1,6 @@
 # 🥑 Bolson Vegetal – Sistema de Pedidos para Verdulería
 
-**Bolson Vegetal** es un sistema web completo para gestión de pedidos de una verdulería con envíos a domicilio.
+**Bolson Vegetal** es un sistema web completo para que una verdulería gestione sus productos y reciba pedidos por WhatsApp sin errores ni confusiones, agilizando el trabajo diario.
 
 Incluye:
 
@@ -35,7 +35,7 @@ Incluye:
 
 - Catálogo de productos con imágenes reales
 - Carrito de compras (se guarda en localStorage)
-- Checkout simple → envía el pedido por WhatsApp preformateado
+- Checkout → genera un mensaje de WhatsApp preformateado con el pedido, listo para enviar
 - Páginas informativas: Quiénes somos, Envíos, Contacto, Preguntas frecuentes
 
 ---
@@ -52,12 +52,10 @@ Incluye:
 
 ## 🗂️ **Funcionalidades del Backend**
 
-- API RESTful
-- Manejo de pedidos
-- Manejo de productos y stock
-- Autenticación con JWT
-- Subida de imágenes con Cloudinary y Multer
-- SQL estructurado con Sequelize
+- API RESTful construida con Express y Sequelize
+- Middleware de autenticación con JWT
+- Manejo de imágenes con Multer + Cloudinary
+- Base de datos relacional en MySQL
 
 ---
 
@@ -67,6 +65,12 @@ Incluye:
 > Usuario: elBolson
 > Contraseña: admin1234
 
+---
+## 🎥 Videos demo
+
+- 🛒 [Flujo de compra y checkout](https://www.loom.com/share/28c24fda29eb4d54805e3a18dc138be0?sid=7c72a064-8640-4d33-85b6-e5a97536a7df)
+- 🛠️ [Gestión de productos desde el backoffice](https://www.loom.com/share/4b68335fcf36428ca46f08d0d0b3be4d?sid=d809abbf-c056-4eb6-bead-f828b49f62dd)
+- 📷 [Ejemplo de mensaje generado](https://res.cloudinary.com/dueeddro0/image/upload/v1753400057/Captura_de_pantalla_2025-07-24_183222_xpwsf3.png)
 ---
 
 ## 🌎 **Deploy**
